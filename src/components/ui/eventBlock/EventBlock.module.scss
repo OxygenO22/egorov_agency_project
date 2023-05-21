@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 338px;
   margin-bottom: 268px;
 }
 
@@ -11,4 +12,17 @@
   line-height: 27px;
   color: rgba(0, 0, 0, .8);
   margin: 0 0 12px 0;
+}
+
+@media (max-width: 890px) {
+  .eventblock__wrapper {
+    max-width: 300px;
+    margin-bottom: 236px;
+  }
+}
+
+@media(max-width: 550px) {
+  .eventblock__wrapper {
+    margin-bottom: 216px;
+  }
 }

@@ -4,11 +4,15 @@
   margin-bottom: 72px;
 }
 
-.clock__item {
+.clock__item, .clock__itemLittle {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 132px;
+}
+
+.clock__itemLittle {
+  display: none;
 }
 
 .clock__text_wrapper {
@@ -37,10 +41,29 @@
   margin: 0;
 }
 
-.clock__wave_img {
+.clock__wave_picture {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 132px;
+  height: 54px;
+}
+
+.clock__wave_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 890px) {
+  .clock__text {
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 36px;
+  }
 }

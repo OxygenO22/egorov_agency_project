@@ -1,13 +1,41 @@
-.mainpage__cloudTL {
+.mainpage__cloudTL, .mainpage__cloudTL_1170,
+.mainpage__cloudTL_550 {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
 }
 
-.mainpage__cloudTR {
+.mainpage__cloudTR, .mainpage__cloudTR_1170,
+.mainpage__cloudTR_550 {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 0;
+}
+
+.mainpage__cloudTL_1170, .mainpage__cloudTR_1170,
+.mainpage__cloudTL_550, .mainpage__cloudTR_550 {
+  display: none;
+}
+
+@media(max-width: 1170px) {
+  .mainpage__cloudTL, .mainpage__cloudTR {
+    display: none;
+  }
+
+  .mainpage__cloudTL_1170, .mainpage__cloudTR_1170 {
+    display: flex;
+  }
+}
+
+@media(max-width: 550px) {
+  .mainpage__cloudTL, .mainpage__cloudTR, .mainpage__cloudTL_1170,
+    .mainpage__cloudTR_1170 {
+    display: none;
+  }
+
+  .mainpage__cloudTL_550, .mainpage__cloudTR_550 {
+    display: flex;
+  }
 }

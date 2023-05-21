@@ -10,6 +10,14 @@
   background: #162C4E;
 }
 
-.footer__inner {
-  color: #fff;
+@media (max-width: 890px) {
+  .footer__wrapper {
+    height: 160px;
+  }
+}
+
+@media(max-width: 550px) {
+  .footer__wrapper {
+    height: 140px;
+  }
 }
