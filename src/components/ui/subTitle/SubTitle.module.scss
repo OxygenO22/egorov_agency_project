@@ -1,0 +1,16 @@
+.subtitle__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 423px;
+  margin-bottom: 40px;
+}
+
+.subtitle__text {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 400;
+  line-height: 27px;
+  color: rgba(0, 0, 0, .8);
+  margin: 0;
+}

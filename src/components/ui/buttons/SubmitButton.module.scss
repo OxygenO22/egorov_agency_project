@@ -1,0 +1,13 @@
+.submitbutton__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 50%;
+  background: #DF2224;
+  transition: background .2s;
+  &:hover {
+    cursor: pointer;
+    background: #bb5254;
+  }
+}
