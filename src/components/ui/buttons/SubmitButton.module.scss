@@ -1,4 +1,5 @@
 .submitbutton__wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,9 +8,19 @@
   background: #DF2224;
   transition: background .2s;
   &:hover {
-    cursor: pointer;
     background: #bb5254;
   }
+}
+
+.submitbutton__submit{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: transparent;
+  cursor: pointer;
 }
 
 .submitbutton__picture {

@@ -1,8 +1,4 @@
-.eventbutton__link {
-  text-decoration: none;
-}
-
-.eventbutton__wrapper {
+.eventbutton__wrapper, .eventbutton__wrapper_close {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,10 +12,17 @@
   }
 }
 
+.eventbutton__wrapper_close {
+  padding: 16px 74px;
+}
+
 .eventbutton__text {
   font-size: 1.1em;
   font-weight: 400;
   line-height: 27px;
   color: #fff;
-  margin: 0 20px 0 0;
+}
+
+.eventbutton__img {
+  margin: 0 0 0 20px;
 }
