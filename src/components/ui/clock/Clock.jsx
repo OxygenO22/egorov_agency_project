@@ -1,8 +1,9 @@
+import { useEffect, useRef, useState } from 'react';
 import './Clock.scss';
+import { motion } from 'framer-motion';
+import { getPadTime } from './getPadTime';
 import WavePic from '../../../icons/Wave.svg';
 import WavePicLittle from '../../../icons/WaveLittle.svg';
-import { useEffect, useRef, useState } from 'react';
-import { getPadTime } from './getPadTime';
 
 export const Clock = () => {
   const [difference, setDifference] = useState(null);
@@ -41,7 +42,21 @@ export const Clock = () => {
   ];
 
   return (
-    <div className='clock__wrapper'>
+    <motion.div 
+      className='clock__wrapper'
+      initial={{
+        y: -70,
+        opacity: 0
+      }}
+      animate={{
+        y: 0,
+        opacity: 1
+      }}
+      transition={{
+        delay: .4,
+        duration: 1.3
+      }}
+    >
       {
         clockData.map(data => 
           <div className={data.src === '' ? 'clock__item_dot' : 'clock__item'} key={data.id}>
@@ -61,6 +76,6 @@ export const Clock = () => {
           </div>
         )
       }
-    </div>
+    </motion.div>
   )
 }
