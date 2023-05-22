@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/egorov_agency_project/static/css/main.fa448d64.css",
-    "main.js": "/egorov_agency_project/static/js/main.1064b5e6.js",
+    "main.js": "/egorov_agency_project/static/js/main.628a1bf6.js",
     "static/media/Logo.svg": "/egorov_agency_project/static/media/Logo.a8b3ac1a4e6d4baa5053f594386ea476.svg",
     "static/media/Logo_550.svg": "/egorov_agency_project/static/media/Logo_550.80df50cd8adeb61efce6b691a769603b.svg",
     "static/media/CloudTL_1170.svg": "/egorov_agency_project/static/media/CloudTL_1170.49c1787e7dc76864e3047ff5d3bd0685.svg",
@@ -17,10 +17,10 @@
     "static/media/Arrow-right.svg": "/egorov_agency_project/static/media/Arrow-right.215aad5b16681a383d01efef3f41dd8d.svg",
     "static/media/Arrow-down.svg": "/egorov_agency_project/static/media/Arrow-down.bb06f3784b937a1d25e3bb06c0607edd.svg",
     "main.fa448d64.css.map": "/egorov_agency_project/static/css/main.fa448d64.css.map",
-    "main.1064b5e6.js.map": "/egorov_agency_project/static/js/main.1064b5e6.js.map"
+    "main.628a1bf6.js.map": "/egorov_agency_project/static/js/main.628a1bf6.js.map"
   },
   "entrypoints": [
     "static/css/main.fa448d64.css",
-    "static/js/main.1064b5e6.js"
+    "static/js/main.628a1bf6.js"
   ]
 }
