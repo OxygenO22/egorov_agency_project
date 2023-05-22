@@ -4,18 +4,22 @@
   margin-bottom: 72px;
 }
 
-.clock__item, .clock__itemLittle {
+.clock__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 132px;
 }
 
-.clock__itemLittle {
-  display: none;
+.clock__item-dot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 6px;
+  font-family: serif;
 }
 
-.clock__text_wrapper {
+.clock__text-wrapper {
   margin-bottom: 20px;
 }
 
@@ -27,19 +31,23 @@
   color: #162C4E;
 }
 
-.clock__wave_wrapper {
+.clock__wave-wrapper {
   position: relative;
   display: flex;
 }
 
-.clock__wave_text {
+.clock__wave-text, .clock__wave-text-shot {
   font-size: 1em;
   font-weight: 400;
   line-height: 16px;
   color: #fff;
 }
 
-.clock__wave_picture {
+.clock__wave-text-shot {
+  display: none;
+}
+
+.clock__wave-picture {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -52,16 +60,49 @@
   height: 54px;
 }
 
-.clock__wave_img {
+.clock__wave-img, .clock__wave-img-little {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+.clock__wave-img-little {
+  display: none;
+}
+
 @media (max-width: 890px) {
+  .clock__wrapper {
+    margin-bottom: 40px;
+  }
+
+  .clock__item {
+    width: 64px;
+  }
+
   .clock__text {
     font-size: 2em;
     font-weight: 600;
     line-height: 36px;
+  }
+
+  .clock__wave-picture {
+    width: 64px;
+    height: 40px;
+  }
+
+  .clock__wave-text {
+    display: none;
+  }
+
+  .clock__wave-text-shot {
+    display: inline;
+  }
+
+  .clock__wave-img {
+    display: none;
+  }
+
+  .clock__wave-img-little {
+    display: flex;
   }
 }
