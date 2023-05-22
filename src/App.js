@@ -1,10 +1,10 @@
-import { MainPage } from './components/pages/mainPage/MainPage';
 import styles from './App.module.scss';
+import { Router } from './components/ui/Router';
 
 function App() {
   return (
     <div className={styles.app}>
-      <MainPage />
+      <Router />
     </div>
   );
 }

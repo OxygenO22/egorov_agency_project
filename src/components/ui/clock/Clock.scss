@@ -4,7 +4,7 @@
   margin-bottom: 70px;
 }
 
-.clock__item {
+.clock__item, .clock__item-dot {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,23 +12,23 @@
 }
 
 .clock__item-dot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 6px;
-  font-family: serif;
 }
 
 .clock__text-wrapper {
   margin-bottom: 20px;
 }
 
-.clock__text {
+.clock__text, .clock__text_dot {
   position: relative;
   font-size: 4.5em;
   font-weight: 600;
   line-height: 72px;
   color: #162C4E;
+}
+
+.clock__text_dot {
+  font-family: serif;
 }
 
 .clock__wave-wrapper {
@@ -79,7 +79,8 @@
     width: 64px;
   }
 
-  .clock__text {
+  .clock__text,
+  .clock__text_dot {
     font-size: 2em;
     font-weight: 600;
     line-height: 36px;

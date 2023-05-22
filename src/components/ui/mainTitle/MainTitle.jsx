@@ -2,7 +2,7 @@ import styles from './MainTitle.module.scss';
 import { MainTitleData } from './MainTitleData';
 import { motion } from 'framer-motion';
 
-export const MainTitle = () => {
+export const MainTitle = ({page}) => {
   return (
     <motion.div 
       className={styles.maintitle__wrapper}
@@ -21,9 +21,12 @@ export const MainTitle = () => {
     >
       {
         MainTitleData.map(data =>
-          <h1 className={styles.maintitle__text} key={data.id}>
-            {data.text}
-          </h1> 
+          
+              page === data.page &&
+              <h1 className={styles.maintitle__text} key={data.id}>
+                {data.text}
+              </h1> 
+            
         )
       }
     </motion.div>

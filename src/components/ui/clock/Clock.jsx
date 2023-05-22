@@ -33,11 +33,11 @@ export const Clock = () => {
   
   const clockData = [
     {id: 1, text: `${daysLeft}`, waveText: 'Days', waveTextShot: 'DD', src: `${WavePic}`, srcLittle: `${WavePicLittle}`, alt: 'wave'},
-    {id: 2, text: `:`, waveText: '', src: ``, alt: ''},
+    {id: 2, text: `:`, waveText: '', src: '', alt: ''},
     {id: 3, text: `${hoursLeft}`, waveText: 'Hours', waveTextShot: 'HH', src: `${WavePic}`, srcLittle: `${WavePicLittle}`, alt: 'wave'},
-    {id: 4, text: `:`, waveText: '', src: ``, alt: ''},
+    {id: 4, text: `:`, waveText: '', src: '', alt: ''},
     {id: 5, text: `${minutesLeft}`, waveText: 'Minutes',waveTextShot: 'MM', src: `${WavePic}`, srcLittle: `${WavePicLittle}`, alt: 'wave'},
-    {id: 6, text: `:`, waveText: '', src: ``, alt: ''},
+    {id: 6, text: `:`, waveText: '', src: '', alt: ''},
     {id: 7, text: `${secondsLeft}`, waveText: 'Seconds', waveTextShot: 'SS', src: `${WavePic}`, srcLittle: `${WavePicLittle}`, alt: 'wave'},
   ];
 
@@ -61,7 +61,7 @@ export const Clock = () => {
         clockData.map(data => 
           <div className={data.src === '' ? 'clock__item_dot' : 'clock__item'} key={data.id}>
             <div className='clock__text-wrapper'>
-              <p className='clock__text'>{data.text}</p>
+              <p className={data.src === '' ? 'clock__text_dot' : 'clock__text'}>{data.text}</p>
             </div>
             <div className='clock__wave-wrapper'>
               <p className='clock__wave-text'>{data.waveText}</p>

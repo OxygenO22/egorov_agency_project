@@ -15,7 +15,7 @@ export const MainPage = () => {
       <Popup />
       <MainPagePictures />
       <Logo />
-      <MainTitle />
+      <MainTitle page={'mainPage'} />
       <SubTitle />
       <Clock />
       <EventBlock />
