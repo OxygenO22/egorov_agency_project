@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/egorov_agency_project/static/css/main.fa448d64.css",
+    "main.js": "/egorov_agency_project/static/js/main.1064b5e6.js",
+    "static/media/Logo.svg": "/egorov_agency_project/static/media/Logo.a8b3ac1a4e6d4baa5053f594386ea476.svg",
+    "static/media/Logo_550.svg": "/egorov_agency_project/static/media/Logo_550.80df50cd8adeb61efce6b691a769603b.svg",
+    "static/media/CloudTL_1170.svg": "/egorov_agency_project/static/media/CloudTL_1170.49c1787e7dc76864e3047ff5d3bd0685.svg",
+    "static/media/CloudTL_550.svg": "/egorov_agency_project/static/media/CloudTL_550.c8fc0fc612a51b72d97100243024f617.svg",
+    "static/media/CloudTL.svg": "/egorov_agency_project/static/media/CloudTL.72b4ea7f628440cf52a4f679c7bfb47b.svg",
+    "static/media/CloudTR_550.svg": "/egorov_agency_project/static/media/CloudTR_550.d05a3bf497fc8fc7a3e2fa1ae8a5b00c.svg",
+    "static/media/CloudTR.svg": "/egorov_agency_project/static/media/CloudTR.2dfc15066e6cc4cab69ff00379ed90e8.svg",
+    "static/media/CloudTR_1170.svg": "/egorov_agency_project/static/media/CloudTR_1170.7b315d04bd71c7ecb09179169073022d.svg",
+    "static/media/Close.svg": "/egorov_agency_project/static/media/Close.51db4c1f230d10f8c6579e47cb1ca1a1.svg",
+    "index.html": "/egorov_agency_project/index.html",
+    "static/media/Wave.svg": "/egorov_agency_project/static/media/Wave.881c965e4d9f6f59075edb630c5a6951.svg",
+    "static/media/WaveLittle.svg": "/egorov_agency_project/static/media/WaveLittle.ef1b06c8585be93ce075210919107f13.svg",
+    "static/media/Arrow-right.svg": "/egorov_agency_project/static/media/Arrow-right.215aad5b16681a383d01efef3f41dd8d.svg",
+    "static/media/Arrow-down.svg": "/egorov_agency_project/static/media/Arrow-down.bb06f3784b937a1d25e3bb06c0607edd.svg",
+    "main.fa448d64.css.map": "/egorov_agency_project/static/css/main.fa448d64.css.map",
+    "main.1064b5e6.js.map": "/egorov_agency_project/static/js/main.1064b5e6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa448d64.css",
+    "static/js/main.1064b5e6.js"
+  ]
+}
