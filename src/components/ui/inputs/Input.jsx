@@ -1,12 +1,13 @@
+import { sendEmail} from '../../../store/emailSlice/EmailSlice';
 import { openPopup } from '../../../store/popupSlice/PopupSlice';
 import styles from './Input.module.scss';
 import { SubmitButton } from '../buttons/SubmitButton';
-import { useDispatch } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { useForm } from 'react-hook-form';
 
 export const Input = () => {
   const dispatch = useDispatch();
-
+  
   const {
     register,
     formState: {
@@ -19,9 +20,11 @@ export const Input = () => {
   });
 
   const onSubmit = (data) => {
+    dispatch(sendEmail(data.Email));
     dispatch(openPopup());
     reset();
   }
+
 
   return (
       <form className={styles.input__form} onSubmit={handleSubmit(onSubmit)}>
