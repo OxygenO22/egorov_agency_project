@@ -8,7 +8,7 @@ export const EventsPage = () => {
   
   return (
     <div className={styles.eventspage__wrapper}>
-      <Link to='/'>To main page</Link>
+      <Link to='/egorov_agency_project/'>To main page</Link>
       <MainTitle page={'eventsPage'} />
       <Accordion />
     </div>
