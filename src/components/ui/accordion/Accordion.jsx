@@ -18,6 +18,27 @@ export const Accordion = () => {
     AccordionData.map(data => 
         <div className='accordion__wrapper' key={data.id}>
         <div className='accordion__inner'>
+          {<div 
+            className={`accordion__content ${accordionId === data.id && 'active'} `}>
+              <div className='accordion__content-picture'>
+                <img src={data.img} alt={data.alt} />
+              </div>
+              <div className={`accordion__content-text-wrapper ${accordionId === data.id && 'active'}`}>
+                <div className='accordion__content-text-inner-left'>
+                  <p className='accordion__content-text-title'>
+                    {data.title}
+                  </p>
+                  <p className='accordion__content-text-date'>
+                    {data.date}
+                  </p>
+                </div>
+                <div className='accordion__content-text-inner-right'>
+                  <p className='accordion__content-text-number'>
+                    {data.number}
+                  </p>
+                </div>
+              </div>
+          </div>}
           <div className='accordion__head' onClick={() => {
             setAccordionId(data.id)
             }}>
@@ -26,13 +47,6 @@ export const Accordion = () => {
               <h3 className='accordion__head-title'>{data.title}</h3>
             </div>
           </div>
-          {
-            <div 
-            className={`accordion__content ${accordionId === data.id && 'active'} `}>
-              <p className='accordion__content-text'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum mollitia nobis quaerat, autem sed quia fuga saepe necessitatibus totam odio. Velit delectus, alias quaerat consectetur quos sequi dicta voluptates quas consequuntur quis neque deleniti minus ducimus aspernatur cum error tenetur impedit soluta id nostrum reiciendis, veniam, aliquam facere! Excepturi, amet?
-              </p>
-          </div>}
         </div>
       </div>
     )

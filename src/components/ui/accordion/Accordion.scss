@@ -1,6 +1,6 @@
 .accordion__wrapper {
   width: 100%;
-  max-width: 540px;
+  max-width: 688px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,13 +8,12 @@
 
 .accordion__inner {
   width: 100%;
-  max-width: 480px;
   margin-bottom:  4px;
 }
 
 .accordion__head {
-  background: #162C4E;
   padding: 14px 0;
+  background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%);
   &:hover {
     cursor: pointer;
   }
@@ -41,20 +40,61 @@
 }
 
 .accordion__content {
-  background: lightgreen;
+  position: relative;
+  display: flex;
   height: 0;
   opacity: 0;
-  display: flex;
   overflow: hidden;
+  background: lightgreen;
   transition: all .6s ease-in-out;
 }
 
 .accordion__content.active {
-  height: 180px;
+  height: 460px;
   opacity: 1;
 }
 
-.accordion__content-text {
+.accordion__content-text-wrapper {
+  position: absolute;
+  left: 0;
+  bottom: -192px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 0;
+  background: #121212CC;
+  backdrop-filter: blur(10px);
+}
+
+.accordion__content-text-wrapper.active {
+  height: 192px;
+  bottom: 0;
+}
+
+.accordion__content-text-inner-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.accordion__content-text-inner-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+}
+
+.accordion__content-text-title, .accordion__content-text-date {
   font-size: 1em;
-  color: #000;
+  color: #fff;
+}
+
+.accordion__content-text-number {
+  font-style: semibold;
+  font-size: 9.5em;
+  line-height: 152px;
+  letter-spacing: -3%;
+  color: #FFFFFF0A;
 }
