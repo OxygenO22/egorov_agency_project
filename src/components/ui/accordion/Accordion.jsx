@@ -39,10 +39,13 @@ export const Accordion = () => {
                 </div>
               </div>
           </div>}
-          <div className='accordion__head' onClick={() => {
+          <div className={`accordion__head ${accordionId === data.id && 'active'}`} onClick={() => {
             setAccordionId(data.id)
             }}>
             <div className='accordion__head-content'>
+              <div className='accordion__head-picture'>
+                <img src={data.smalimg} alt={data.smalalt} />
+              </div>
               <p className='accordion__head-number'>{data.number}</p>
               <h3 className='accordion__head-title'>{data.title}</h3>
             </div>

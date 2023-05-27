@@ -12,11 +12,30 @@
 }
 
 .accordion__head {
-  padding: 14px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 85px;
+  padding: 0 40px;
   background: linear-gradient(270deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%);
+  border-bottom: 2px solid #DF2224;
   &:hover {
     cursor: pointer;
   }
+}
+
+.accordion__head.active {
+  border-bottom: 2px solid transparent;
+}
+
+.accordion__head-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .accordion__head-content {
@@ -26,12 +45,19 @@
 }
 
 .accordion__head-number {
-  margin-right: 20px;
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -3%;
+  margin-right: 32px;
+  color: #fff;
 }
 
-.accordion__head-title,
-.accordion__head-number {
-  font-size: 1.2em;
+.accordion__head-title {
+  font-style: "Semibold";
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 24px;
   color: #fff;
 }
 
@@ -74,9 +100,10 @@
 .accordion__content-text-inner-left {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 50%;
   height: 100%;
+  padding: 25px 40px;
 }
 
 .accordion__content-text-inner-right {
@@ -86,8 +113,19 @@
   height: 100%;
 }
 
-.accordion__content-text-title, .accordion__content-text-date {
+.accordion__content-text-title {
+  font-size: 1.12em;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.accordion__content-text-date {
   font-size: 1em;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 30px;
   color: #fff;
 }
 
