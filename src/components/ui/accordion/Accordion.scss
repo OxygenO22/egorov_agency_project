@@ -78,6 +78,7 @@
 .accordion__content.active {
   height: 460px;
   opacity: 1;
+  border-bottom: 4px solid #fff;
 }
 
 .accordion__content-text-wrapper {
