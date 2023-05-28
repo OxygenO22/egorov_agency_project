@@ -107,6 +107,9 @@
 }
 
 .accordion__content-text-inner-right {
+  position: absolute;
+  top: 0;
+  right: -35px; 
   display: flex;
   justify-content: flex-end;
   width: 50%;
@@ -129,10 +132,13 @@
   color: #fff;
 }
 
+.accordionbutton__link {
+  text-decoration: none;
+}
+
 .accordion__content-text-number {
   font-style: semibold;
   font-size: 9.5em;
   line-height: 152px;
-  letter-spacing: -3%;
   color: #FFFFFF0A;
 }

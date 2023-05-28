@@ -1,0 +1,26 @@
+.accordionbutton__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  border: 1px solid #fff;
+  border-left: 6px solid #fff;
+  background: transparent;
+  transition: .2s;
+  &:hover {
+    cursor: pointer;
+    border-color: #DF2224;
+    color: #DF2224;
+  }
+  &:hover .accordionbutton__text {
+    color: #DF2224;
+  }
+}
+
+.accordionbutton__text {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 19px;
+  color: #fff;
+  transition: .2s;
+}

@@ -1,3 +1,4 @@
+import { AccordionButton } from '../buttons/AccordionButton';
 import  './Accordion.scss';
 import { AccordionData } from './AccordionData';
 import { useEffect, useState } from 'react';
@@ -31,6 +32,9 @@ export const Accordion = () => {
                   <p className='accordion__content-text-date'>
                     {data.date}
                   </p>
+                  <a className='accordionbutton__link' href="https://egorovagency.by/#main" target="_blank" rel='noreferrer'>
+                    <AccordionButton />
+                  </a>
                 </div>
                 <div className='accordion__content-text-inner-right'>
                   <p className='accordion__content-text-number'>
