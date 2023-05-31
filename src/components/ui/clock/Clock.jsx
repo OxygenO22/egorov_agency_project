@@ -13,7 +13,7 @@ export const Clock = () => {
   const secondsLeft = getPadTime(Math.floor(difference / 1000) % 60);
   let interval = useRef();
   const timer = () => {
-    const nextDate = new Date(`May 31 2023`);
+    const nextDate = new Date(`June 30 2023`);
     interval = setInterval(() => {
       const currentTime = new Date();
       const dist = nextDate - currentTime;

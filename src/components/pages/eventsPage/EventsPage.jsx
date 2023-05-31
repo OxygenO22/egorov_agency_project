@@ -10,7 +10,9 @@ export const EventsPage = () => {
     <div 
       className={styles.eventspage__wrapper}
     >
-      <Link to='/egorov_agency_project/'>To main page</Link>
+      <div className={styles.eventspage__link}>
+        <Link to='/egorov_agency_project/'>To main page</Link>
+      </div>
       <MainTitle page={'eventsPage'} />
       <Accordion />
     </div>
