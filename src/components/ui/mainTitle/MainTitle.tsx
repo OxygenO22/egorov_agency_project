@@ -1,6 +1,7 @@
-import styles from './MainTitle.module.scss';
 import { MainTitleData } from './MainTitleData';
 import { motion } from 'framer-motion';
+import React from "react";
+import styles from './MainTitle.module.scss';
 
 export const MainTitle = ({page}) => {
   return (

@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
 import { Accordion } from '../../ui/accordion/Accordion';
-import styles from './EventsPage.module.scss';
+import { Link } from 'react-router-dom';
 import { MainTitle } from '../../ui/mainTitle/MainTitle';
 import { motion } from 'framer-motion';
+import styles from './EventsPage.module.scss';
+import React from 'react';
 
 export const EventsPage = () => {
   

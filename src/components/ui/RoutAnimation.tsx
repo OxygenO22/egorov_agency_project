@@ -1,8 +1,9 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
-import { MainPage } from '../pages/mainPage/MainPage';
-import { EventsPage } from '../pages/eventsPage/EventsPage';
-import { MainTitle } from './mainTitle/MainTitle';
 import { AnimatePresence } from 'framer-motion';
+import { EventsPage } from '../pages/eventsPage/EventsPage';
+import { MainPage } from '../pages/mainPage/MainPage';
+import { MainTitle } from './mainTitle/MainTitle';
+import React from "react";
 
 export const RoutAnimation = () => {
   const location = useLocation();

@@ -1,12 +1,34 @@
-import { sendEmail} from '../../../store/emailSlice/EmailSlice';
 import { openPopup } from '../../../store/popupSlice/PopupSlice';
+import React from 'react';
+import { sendEmail} from '../../../store/emailSlice/EmailSlice';
 import styles from './Input.module.scss';
 import { SubmitButton } from '../buttons/SubmitButton';
-import { useDispatch} from 'react-redux';
-import { useForm } from 'react-hook-form';
+import { useTsDispatch } from '../../hooks/tsHook';
+import { Resolver, useForm } from 'react-hook-form';
+
+type FormValues = {
+  Email: string;
+};
+
+const resolver: any = async (values) => {
+  return {
+    values: values.Email ? values : {},
+    errors: !values.Email
+      ? {
+          Email: {
+            required: "Поле обязательно к заполнению",
+            pattern: {
+              value: /\S+@\S+\.\S+/,
+              message: "Введите email в правильном формате",
+            },
+          },
+        }
+      : {},
+  };
+};
 
 export const Input = () => {
-  const dispatch = useDispatch();
+  const dispatch = useTsDispatch();
   
   const {
     register,
@@ -15,8 +37,9 @@ export const Input = () => {
     },
     handleSubmit,
     reset
-  } = useForm({
-    mode: 'onBlur'
+  } = useForm<FormValues>({
+    resolver,
+    mode: 'onBlur',
   });
 
   const onSubmit = (data) => {
@@ -33,13 +56,7 @@ export const Input = () => {
             className={styles.input}
             type='email'
             placeholder='Enter your Email and get notified'
-            {...register('Email', {
-              required: 'Поле обязательно к заполнению',
-              pattern: {
-              value: /\S+@\S+\.\S+/,
-              message: "Введите email в правильном формате"
-            }
-            })} 
+            {...register('Email')} 
           />
           <div className={styles.input__submitbutton}>
             <SubmitButton />

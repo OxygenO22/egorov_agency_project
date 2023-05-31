@@ -1,8 +1,13 @@
-import styles from './LinkButton.module.scss';
 import ArrowDown from '../../../icons/Arrow-down.svg'
 import { Link } from 'react-router-dom';
+import React, { FC } from "react";
+import styles from './LinkButton.module.scss';
 
-export const LinkButton = ({onClick}) => {
+interface ILinkButton {
+  onClick?: () => void;
+}
+
+export const LinkButton: FC<ILinkButton> = ({onClick}) => {
   return (
       <Link to='/egorov_agency_project/eventpage'>
         <div onClick={onClick} className={styles.linkbutton__wrapper}>

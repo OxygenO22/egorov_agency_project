@@ -1,6 +1,7 @@
-import { MainPicturesData } from './MainPagePicturesData';
 import  './MainPagePictures.scss';
+import { MainPicturesData } from './MainPagePicturesData';
 import { motion } from 'framer-motion'; 
+import React from "react";
 
 
 export const MainPagePictures = () => {
