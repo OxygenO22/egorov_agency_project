@@ -1,5 +1,6 @@
-import styles from './SubmitButton.module.scss';
 import ArrowRight from '../../../icons/Arrow-right.svg';
+import React from "react";
+import styles from './SubmitButton.module.scss';
 
 export const SubmitButton = () => {
   return (

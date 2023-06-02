@@ -1,10 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+interface IInitialState {
+  isOpen: boolean;
+};
+
+const initialState: IInitialState = {
+  isOpen: false
+};
+
 const PopupSlice = createSlice({
   name: 'popup',
-  initialState: {
-    isOpen: false
-  },
+  initialState,
   reducers: {
     openPopup(state) {
       state.isOpen = true;

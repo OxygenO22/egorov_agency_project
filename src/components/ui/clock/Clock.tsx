@@ -2,20 +2,21 @@ import { useEffect, useRef, useState } from 'react';
 import './Clock.scss';
 import { motion } from 'framer-motion';
 import { getPadTime } from './getPadTime';
+import React from "react";
 import WavePic from '../../../icons/Wave.svg';
 import WavePicLittle from '../../../icons/WaveLittle.svg';
 
 export const Clock = () => {
-  const [difference, setDifference] = useState(null);
-  const daysLeft = getPadTime(Math.floor(difference / 1000 / 60 / 60 / 24));
-  const hoursLeft = getPadTime(Math.floor(difference / 1000 / 60 / 60) % 24);
-  const minutesLeft = getPadTime(Math.floor(difference / 1000 / 60) % 60);
-  const secondsLeft = getPadTime(Math.floor(difference / 1000) % 60);
-  let interval = useRef();
+  const [difference, setDifference] = useState<null | number>(null);
+  const daysLeft = getPadTime(Math.floor(difference! / 1000 / 60 / 60 / 24));
+  const hoursLeft = getPadTime(Math.floor(difference! / 1000 / 60 / 60) % 24);
+  const minutesLeft = getPadTime(Math.floor(difference! / 1000 / 60) % 60);
+  const secondsLeft = getPadTime(Math.floor(difference! / 1000) % 60);
+  let interval: any = useRef();
   const timer = () => {
-    const nextDate = new Date(`June 30 2023`);
+    const nextDate: any = new Date(`June 30 2023`);
     interval = setInterval(() => {
-      const currentTime = new Date();
+      const currentTime: any = new Date();
       const dist = nextDate - currentTime;
       if (dist <= 0 ) {
         clearInterval(interval.current);

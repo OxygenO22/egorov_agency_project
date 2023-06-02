@@ -1,12 +1,10 @@
-import styles from './App.module.scss';
+import React from 'react';
 import { Router } from './components/ui/Router';
+import styles from './App.module.scss';
 
-function App() {
+export const App = () => {
   return (
     <div className={styles.app}>
       <Router />
     </div>
-  );
-}
-
-export default App;
+  );};

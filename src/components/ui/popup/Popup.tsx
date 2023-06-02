@@ -1,13 +1,14 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useTsDispatch, useTsSelector } from '../../hooks/tsHook';
 import Close from '../../../icons/Close.svg';
 import { closePopup } from '../../../store/popupSlice/PopupSlice';
 import { EventButton } from '../buttons/EventButton';
 import styles from './Popup.module.scss';
+import React from 'react';
 
 export const Popup = () => {
-  const dispatch = useDispatch();
-  const isOpen = useSelector(state => state.popup.isOpen);
-  const {error} = useSelector(state => state.emails)
+  const dispatch = useTsDispatch();
+  const isOpen = useTsSelector((state) => state.popup.isOpen);
+  const { error } = useTsSelector((state) => state.emails);
 
   return (
     <>
@@ -20,7 +21,7 @@ export const Popup = () => {
         <h2 className={styles.popup__title}>{error ? 'Error!' : 'Success!'}</h2>
         <p className={styles.popup__text}>{error ? `${error}` : 'You have successfully subscribed to the email newsletter'}</p>
         <div className={styles.popup__button_wrapper}>
-          <EventButton isPicture='folse' isClose='true' onClick={() => dispatch(closePopup())} />
+          <EventButton isPicture={false} isClose={true} onClick={() => dispatch(closePopup())} />
         </div>
       </div>
     </div>
