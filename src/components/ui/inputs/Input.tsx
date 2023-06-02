@@ -10,7 +10,7 @@ type FormValues = {
   Email: string;
 };
 
-const resolver: any = async (values) => {
+const resolver: any = async (values: any) => {
   return {
     values: values.Email ? values : {},
     errors: !values.Email
@@ -42,7 +42,7 @@ export const Input = () => {
     mode: 'onBlur',
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
     dispatch(sendEmail(data.Email));
     dispatch(openPopup());
     reset();
