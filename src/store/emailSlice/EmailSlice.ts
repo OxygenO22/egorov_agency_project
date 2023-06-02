@@ -12,10 +12,6 @@ interface IEmailState {
   error: string | null;
 }
 
-/* function isError(action: AnyAction) {
-  return action.type.endsWidth('rejected');
-}; */
-
 export const sendEmail = createAsyncThunk<IEmailList, string, {rejectValue: string}>(
   'emails/sendEmail',
   async function(newEmail, {rejectWithValue}) {
@@ -58,12 +54,16 @@ const EmailSlice = createSlice({
       .addCase(sendEmail.fulfilled, (state, action) => {
         state.emailsList.push(action.payload);
       })
-      /* .addMatcher(isError, (state, action: PayloadAction<string>) => {
+      .addMatcher(isError, (state, action: PayloadAction<string>) => {
         state.error = action.payload;
         state.loading = false;
-      }) */
+      })
   }
 });
 
 export default EmailSlice.reducer;
+
+function isError(action: AnyAction) {
+  return action.type.endsWith('rejected');
+};
 
